@@ -1,0 +1,293 @@
+html{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    background: #66A3D2; /* ƒл€ старых браузров */
+    background: linear-gradient(to top, #006666, #d4ffff);
+    font-size:small;
+    padding:0px;
+}
+body{
+    box-sizing:inherit;
+    padding:0;
+    width:90%;
+    min-width: 710px;
+    max-width:1200px;
+    background:white;
+    margin: 0px auto 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size:20px;
+    line-height:1.5;
+}
+#conteiner {
+    padding: 0 1em 1em 2em;
+}
+p{
+    text-indent:3em;
+    text-align: justify;
+}
+a{
+    text-decoration:none;
+    color: black;
+}
+h1{
+    color:#003366;
+}
+hr{
+    background:#1abc9c !important;
+
+}
+table{
+  width: 100%;
+  border: 2px solid #1abc9c;
+}
+th{
+  background: rgba(109, 114, 115, 0.4);
+}
+tr:nth-child(2n-1){
+  background: rgba(109, 114, 115, 0.1);
+}
+/*шапка*/
+#header{
+    color:#003366;
+}
+/* вход в систему*/
+#enter {
+  box-sizing: border-box;
+  width: 260px;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  padding-bottom: 1.5em;
+  border-radius: 3px;
+}
+input,
+textarea {
+  margin: 1em 0px;
+  width: 99%;
+  display: block;
+  border: none;
+  padding: 2em 0;
+  border-bottom: solid 1px #1abc9c;
+  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+          transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+  background-position: -1000px 0;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #0e6252;
+}
+input:focus, input:valid,
+textarea:focus, textarea:valid {
+  box-shadow: none;
+  outline: none;
+  background-position: 0 0;
+}
+input:focus::-webkit-input-placeholder, 
+input:valid::-webkit-input-placeholder,
+textarea:focus::-webkit-textarea-placeholder, 
+textarea:valid::-webkit-textarea-placeholder {
+  color: #1abc9c;
+  font-size: 1em;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  visibility: visible !important;
+}
+button,
+.button,
+input[type="submit"]{
+  display:inline-block;
+  border: none;
+  background: #1abc9c;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 0.7em;
+  width: 200px;
+  color: white;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  font-size:1em;
+  margin-left:calc(100% - 200px);
+  margin-top:0.5em;
+}
+
+/*слайдер*/
+#slider {
+    width: 105%;
+    max-width:1200px;
+    margin: 0 auto;
+    margin-left: -3%;
+    display: table;
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+#slidewrapper {
+    position: relative;
+    width: calc(100% * 3);
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+   -webkit-transition: 1s;
+   -o-transition: 1s;
+    transition: 1s;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+#slidewrapper .slide {
+    width: calc(100%/3);
+    list-style: none;
+    display: inline;
+    float: left;
+}
+#navBth{
+    position:absolute;
+        bottom:5px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+input[type="radio"]{
+    display:inline;
+    width:2em;
+}
+.navigation:hover{
+    cursor:pointer;
+}
+/*верхнее меню*/
+#menuTop{
+    padding: 0 5px;
+    font-weight: bold;
+    text-align:right;
+    line-height:2;
+}
+#menuTop a{
+    display:inline-block;
+    padding:5px;
+    color:#003366;
+    width: 3.1em;
+    text-align: center;
+}
+#menuTop #vk,
+#menuTop #contacts{
+    padding:0 0 0 0.2em;
+    margin:0;
+    width:2.5em;
+    height:100%;
+    background: url(/image/vk.svg) 50% 50% no-repeat;
+    color:white;
+    
+}
+#menuTop #contacts{
+    background: url(/image/contacts.svg) 50% 50%  no-repeat;
+}
+/*навигация*/
+.menu{
+    display:table;
+    box-sizing:inherit;
+    height: 3em;
+    background: #33CC99;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left:-2em;
+    width: calc(100% + 3em);
+}
+.menu a{
+    box-sizing:inherit;
+    display:table-cell;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    width: calc(100%/5);
+    height: 100%;
+    vertical-align:middle;
+    text-align:center;
+}
+button:hover,
+a:hover
+{
+    -webkit-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    ransform: translateY(-3px);
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: 0 10px 10px #222;
+    cursor: pointer;
+}
+/*ѕозиционирование лайтбоксов на весь ресурс*/
+.lightBox
+{
+    display:none;
+    box-sizing:inherit;
+    position: fixed;
+        top: 0;
+        left:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(196, 196, 196, 0.54);
+    z-index:200;
+    text-decoration:none;
+    color:black;
+    font-size: 1em;
+}
+.lightBox:target{
+   display:block;
+}
+.lightBox .box
+{   
+    position: fixed;
+       top:50%;
+       left:50%;
+    width: 50%;
+    min-width:400px;
+    max-width:1000px;
+    max-height:700px;
+    transform: translate(-50%, -50%);
+    background:#fff;
+    padding:0.5em 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius:5px;
+    overflow:auto;
+}
+.center,
+.lightBox .box h1{
+    text-align: center;
+}
+.imgBox{
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    margin:0em 0em 0em -1.7em;
+    width: calc(100% + 2em);
+    height:205px;
+    overflow-y: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius:5px;
+}
+.imgBox img{
+  height:190px;
+   margin:5px;
+}
+.lightBoxForImgBox .box{
+  width:50%;
+  margin-bottom: 5em;
+}
+.lightBoxForImgBox img{
+  width:99%;
+}
+.left{
+  float:left;
+}
+.code{
+  background: rgba(217, 252, 242, 0.84);
+  border: 1px solid #92d4c1;
+  display: block;
+  margin: 0.3em;
+  padding: 0;
+
+}
+
